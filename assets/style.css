@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('RobotoCondensed.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Batangas';
+    src: url('Batangas.otf') format('opentype');
+    font-weight: bold;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.sidebar {
+    background-color: rgb(255, 255, 255, 0.15);
+    backdrop-filter: blur(16px);   
+}
+.offcanvas-body .navbar-nav .nav-item .nav-link {
+    color: #000000;
+}
+.offcanvas-body .navbar-nav .nav-item .nav-link:hover,
+.offcanvas-body .navbar-nav .nav-item .nav-link:focus {
+    color: #CC9900; 
+}
+h1, h2, h3, h4, h5 {
+    font-family: 'Batangas', serif;
+}
+.btn:hover {
+    transform: translateY(-10px);
+    transition: transform 0.3s ease;
+    color: #CC9900; 
+}
+
+@media (max-width: 576px) {
+    .logo {
+        margin-left: 10px;
+    }
+}
