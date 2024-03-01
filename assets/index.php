@@ -13,17 +13,17 @@
 
     <body>    
         <div class="container-fluid d-flex flex-column justify-content-center align-items-center vh-100 position-relative">
-            <div class="museum-box" style="position: absolute; top: 0; right: 0;">
-                <img class="museum img-fluid" src="assets/logo_black.png" alt="png image">
+            <div style="position: absolute; top: 0; right: 0;">
+                <img class="img-fluid mr-5" src="assets/logo_black.png" alt="png image" style="max-width: 200px;">
             </div>
             <div class="text-center">
-                <p>RESTORING THE PHILIPPINE HISTORY<br>OF THE FIRST PHILIPPINE REPUBLIC</p>
+                <p class="display-6">RESTORING THE PHILIPPINE HISTORY<br>OF THE FIRST PHILIPPINE REPUBLIC</p>
             </div>
             <div class="text-center">
-                <h1 class="title">The Museum Exhibit</h1>
+                <h1 class="display-1 p-5">The Museum Exhibit</h1>
             </div>
             <div class="text-center">
-                <p>WELOME TO</p>
+                <p class="display-6" style="font-weight: bold;">WELOME TO</p>
             </div>
             <div class="text-center">
                 <button type="button" class="btn btn-lg btn-block border border-dark rounded-pill" style="color: white; background-color: #362406;" onclick="homePage()">MALOLOS JOURNEY</button>
