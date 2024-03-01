@@ -44,6 +44,7 @@ header {
     transform: translateY(-10px);
     transition: transform 0.3s ease;
     color: #CC9900; 
+
 }
 .btn-home {
     background-color: #CC9900;
@@ -56,14 +57,20 @@ header {
 }
 .reveal {
     position: relative;
-    transform: translateY(150px);
+    transform: translateY(100px);
     opacity: 0;
-    transition: all 2s ease;
+    transition: all 3s ease;
 }
 .reveal.active {
     transform: translateY(0px);
     opacity: 1;
 }
+footer {
+    background-color: #000000;
+    margin-top: auto;
+    padding: 5px;
+}
+
 @media (max-width: 576px) {
     .museum-box img {
         max-width: 120px;
