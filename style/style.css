@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('RobotoCondensed.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Batangas';
+    src: url('Batangas.otf') format('opentype');
+    font-weight: bold;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+}
+.landing-page {
+    background: url('https://github.com/Nthnnn26/malolos.museum.io/blob/main/assets/bg_index.png?raw=true');
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: bg-fade-in 15s forwards;
+    opacity: 0.1;
+    transition: opacity 0.3s ease;
+}
+@keyframes bg-fade-in {
+    from {
+        opacity: 0.1;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.fade-in {
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    outline: none;
+    animation: text-white 15s forwards;
+}
+
+@keyframes text-white {
+    0% {
+        color: #000000;
+    }
+    100% {
+        color: #FFFFFF;
+    }
+}
+.museum-box img {
+    max-width: 200px;
+    margin-right: 30px;
+    animation: image-white 15s forwards;
+    filter: invert(0%);
+}
+@keyframes image-white {
+    100% {
+        filter: invert(100%);
+    }
+}
+h1, h2, h3, h4, h5 {
+    font-family: 'Batangas', sans-serif;
+}
+p {
+    font-size: 32px;
+}
+.title {
+    font-size: 80px;
+}
+.navbar-nav .nav-link {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+.navbar-collapse .navbar-nav .nav-item .nav-link:hover,
+.navbar-collapse .navbar-nav .nav-item .nav-link:focus {
+    color: #CC9900 !important; 
+}
+header {
+    align-items: center;
+    justify-content: space-between;
+}
+.btn:hover {
+    transform: translateY(-10px);
+    transition: transform 0.3s ease;
+    color: #CC9900; 
+
+}
+.btn-home {
+    background-color: #CC9900;
+}
+.btn-home:hover {
+    transform: translateY(-10px);
+    transition: transform 0.3s ease;
+    background-color: #362406; 
+    color: #CC9900;
+}
+.reveal {
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 3s ease;
+}
+.reveal.active {
+    transform: translateY(0px);
+    opacity: 1;
+}
+footer {
+    background-color: #000000;
+    margin-top: auto;
+    padding: 5px;
+}
+
+@media (max-width: 576px) {
+    .museum-box img {
+        max-width: 120px;
+        margin-right: 20px;
+    }
+    p {
+        font-size: 16px;
+    }
+    .title {
+        font-size: 48px;
+    }
+    .reverse {
+        flex-direction: column-reverse;
+    }
+}
