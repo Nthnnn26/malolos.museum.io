@@ -14,37 +14,48 @@
     scroll-behavior: smooth;
     font-family: 'Roboto', sans-serif;
 }
+body {
+    font-size: 16px;
+    /*display: none;*/
+}
+h1 {
+    font-size: 2.5em;
+    font-family: 'Batangas', sans-serif;
+}
+h2 {
+    font-size: 2em;
+    font-family: 'Batangas', sans-serif;
+}
+p {
+    font-size: 1.1em;
+}
+
+                                                    /* INDEX */
+
 .landing-page {
     background: url('https://github.com/Nthnnn26/malolos.museum.io/blob/main/assets/bg_index.png?raw=true');
     background-blend-mode: multiply;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
     animation: bg-fade-in 15s forwards;
     opacity: 0.1;
     transition: opacity 0.3s ease;
 }
-@keyframes bg-fade-in {
-    from {
-        opacity: 0.1;
-    }
-    to {
-        opacity: 1;
-    }
-}
 .fade-in {
-    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-    outline: none;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
     animation: text-white 15s forwards;
 }
-
-@keyframes text-white {
-    0% {
-        color: #000000;
-    }
-    100% {
-        color: #FFFFFF;
-    }
+.index-btn {
+    border: 1px solid #FFFFFF;
+    border-radius: 50px;
+    color: white;
+    padding: 10px 15px;
+    font-size: 1.3em;
+    background-color: #000000;
+    animation: black-to-brown 15s forwards;
 }
 .museum-box img {
     max-width: 200px;
@@ -52,20 +63,47 @@
     animation: image-white 15s forwards;
     filter: invert(0%);
 }
+.side-img {
+    opacity: 1;
+    animation: bg-fade-out 15s forwards;
+ }
+ /* INDEX - ANIMATIONS */
+ @keyframes bg-fade-in {
+    from {
+        opacity: 0.1;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes text-white {
+    0% {
+        color: #000000;
+    }
+    100% {
+        color: #FFFFFF;
+        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    }
+}
+@keyframes black-to-brown {
+    100% {
+        background-color: #362406;
+    }
+}
 @keyframes image-white {
     100% {
         filter: invert(100%);
     }
 }
-h1, h2, h3, h4, h5 {
-    font-family: 'Batangas', sans-serif;
+@keyframes bg-fade-out {
+    100% {
+        opacity: 0;
+    }
 }
-p {
-    font-size: 32px;
-}
-.title {
-    font-size: 80px;
-}
+
+                                                        /* INDEX DESIGN END */
+
+                                                        /* TOP BAR */
 .navbar-nav .nav-link {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
@@ -78,44 +116,110 @@ header {
     align-items: center;
     justify-content: space-between;
 }
-.btn:hover {
-    transform: translateY(-10px);
-    transition: transform 0.3s ease;
-    color: #CC9900; 
-
+.btn-brown {
+    border: 2px solid #CC9900;
+    border-radius: 50px;
+    color: white;
+    background-color: #613E0A;
+    padding: 10px 15px;
+    font-size: 1.3em;
 }
-.btn-home {
-    background-color: #CC9900;
-}
-.btn-home:hover {
-    transform: translateY(-10px);
+.btn-brown:hover {
+    transform: scale(1.1); 
     transition: transform 0.3s ease;
-    background-color: #362406; 
-    color: #CC9900;
+}
+.btn-black {
+    border: 2px solid #FFFFFF;
+    border-radius: 50px;
+    color: white;
+    background-color: #000000;
+    padding: 10px 15px;
+    font-size: 1.3em;
+}
+.btn-black:hover {
+    transform: scale(1.1); 
+    transition: transform 0.3s ease;
 }
 .reveal {
     position: relative;
-    transform: translateY(100px);
+    transform: translateY(50px);
     opacity: 0;
-    transition: all 3s ease;
+    transition: all 2s ease;
 }
 .reveal.active {
     transform: translateY(0px);
     opacity: 1;
 }
+.linear-border {
+    border-bottom: 3px solid;
+    border-image: linear-gradient(to right, rgba(97, 62, 10, 0), #CC9900, rgba(97, 62, 10, 0));
+    border-image-slice: 1;
+}
+.container-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    max-height: 100px;  
+    
+}
+
+.btn-glowing {
+    width: 700px;
+    font-size: 1.3em;
+    border: 2px solid #CC9900;
+    border-radius: 50px;
+    color: white;
+    background-color: #613E0A;
+    padding: 10px 15px;
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: 20px 0px 50px 10px rgba(97, 62, 10, 0.7), -20px 0px 50px 10px rgba(97, 62, 10, 0.7);
+    -webkit-box-shadow: 20px 0px 50px 10px rgba(97, 62, 10, 0.7), -20px 0px 50px 10px rgba(97, 62, 10, 0.7);
+    -moz-box-shadow: 20px 0px 50px 10px rgba(97, 62, 10, 0.7), -20px 0px 50px 10px rgba(97, 62, 10, 0.7);
+}
+.btn-glowing:hover {
+    transform: scale(1.1); 
+    transition: transform 0.3s ease;
+}
+.btn-noglow {
+    width: 700px;
+    font-size: 1.3em;
+    border: 2px solid #CC9900;
+    border-radius: 50px;
+    color: white;
+    background-color: #613E0A;
+    padding: 10px 15px;
+    overflow: hidden;
+    text-decoration: none;   
+}
+.btn-noglow:hover {
+    transform: scale(1.1); 
+    transition: transform 0.3s ease;
+}
+
 footer {
-    background-color: #000000;
+    background-color: #362406;
     margin-top: auto;
     padding: 5px;
 }
 
 @media (max-width: 576px) {
+    body {
+        font-size: 12px;
+    }
     .museum-box img {
         max-width: 120px;
         margin-right: 20px;
     }
+    .side-img {
+       display: none;
+    }
     p {
-        font-size: 16px;
+        font-size: 14px;
     }
     .title {
         font-size: 48px;
