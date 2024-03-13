@@ -16,7 +16,7 @@
 }
 body {
     font-size: 16px;
-    /*display: none;*/
+    display: none;
 }
 h1 {
     font-size: 2.3em;
@@ -74,11 +74,14 @@ p {
  }
  /* INDEX - ANIMATIONS */
  @keyframes bg-fade-in {
-    from {
-        opacity: 0.1;
+    0% {
+        opacity: 0; 
     }
-    to {
-        opacity: 1;
+    20% {
+        opacity: 0; 
+    }
+    100% {
+        opacity: 1; 
     }
 }
 @keyframes text-white {
@@ -264,6 +267,9 @@ footer {
     }
     h2 {
         font-size: 1.5em;
+    }
+    h5 {
+        max-width: 80px;
     }
     p {
         font-size: 0.8em;
